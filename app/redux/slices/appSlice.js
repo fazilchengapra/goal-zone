@@ -5,8 +5,8 @@ const initialState = {
     value: true
 }
 
-export const sideBarSlice = createSlice({
-    name: 'sideBar',
+export const menuSlice = createSlice({
+    name: 'menu',
     initialState,
     reducers: {
         action: (state) => {
@@ -16,6 +16,6 @@ export const sideBarSlice = createSlice({
 }) 
 
 
-export const {action} = sideBarSlice.actions
+export const {action} = menuSlice.actions
 
-export default sideBarSlice.reducer
+export default menuSlice.reducer

@@ -1,78 +1,15 @@
 "use client";
 import Image from "next/image";
-import React, { useState } from "react";
+import { useState } from "react";
 import Logo from "@/public/assets/Logo.svg";
 import LogoSm from "@/public/assets/Tvit.svg";
 import { MdMenuOpen } from "react-icons/md";
-import { RiDashboardLine } from "react-icons/ri";
-import { HiOutlineVideoCamera } from "react-icons/hi2";
-import { GoSortAsc } from "react-icons/go";
-import { BiTv } from "react-icons/bi";
-import { CiShop } from "react-icons/ci";
-import { HiOutlineNewspaper } from "react-icons/hi2";
 import { FaStar } from "react-icons/fa";
-import { useSelector } from "react-redux";
+import { menu } from "@/public/assets/constant/sideBarMenu";
 
 const Sidebar = () => {
   const [openMenu, setOpenMenu] = useState(true);
-  const menuOp = useSelector((state:{sideBar:{value:boolean}}) => state.sideBar.value)
-  console.log(menuOp)
-  const menu = [
-    {
-      title: "Dashboard",
-      icon: (
-        <RiDashboardLine
-          size={openMenu ? 20 : 25}
-          className="text-[#636363] group-hover:text-white"
-        />
-      ),
-    },
-    {
-      title: "Live Football",
-      icon: (
-        <HiOutlineVideoCamera
-          size={20}
-          className="text-[#636363] group-hover:text-white"
-        />
-      ),
-    },
-    {
-      title: "Standings",
-      icon: (
-        <GoSortAsc
-          size={openMenu ? 20 : 25}
-          className="text-[#636363] group-hover:text-white"
-        />
-      ),
-    },
-    {
-      title: "Highlights",
-      icon: (
-        <BiTv
-          size={openMenu ? 20 : 25}
-          className="text-[#636363] group-hover:text-white"
-        />
-      ),
-    },
-    {
-      title: "Shop",
-      icon: (
-        <CiShop
-          size={openMenu ? 20 : 25}
-          className="text-[#636363] group-hover:text-white"
-        />
-      ),
-    },
-    {
-      title: "News",
-      icon: (
-        <HiOutlineNewspaper
-          size={openMenu ? 20 : 25}
-          className="text-[#636363] group-hover:text-white"
-        />
-      ),
-    },
-  ];
+  
 
   const leagues = [
     {

@@ -1,9 +1,9 @@
 import { configureStore } from "@reduxjs/toolkit";
-import sidebarReducer from './slices/appSlice'
+import menuReducer from './slices/appSlice'
 
 export const store = configureStore({
     reducer: {
-        sideBar: sidebarReducer
+        menu: menuReducer
     }
 })
 

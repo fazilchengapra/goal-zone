@@ -5,49 +5,10 @@ import Logo from "@/public/assets/Logo.svg";
 import LogoSm from "@/public/assets/Tvit.svg";
 import { MdMenuOpen } from "react-icons/md";
 import { FaStar } from "react-icons/fa";
-import { menu } from "@/public/assets/constant/sideBarMenu";
+import { menu, leagues, club } from "@/public/assets/constant/sideBarMenu";
 
 const Sidebar = () => {
   const [openMenu, setOpenMenu] = useState(true);
-  
-
-  const leagues = [
-    {
-      src: "https://media.api-sports.io/football/leagues/4.png",
-      title: "Euro Championship",
-    },
-    {
-      src: "https://media.api-sports.io/football/leagues/2.png",
-      title: "UEFA Champions League",
-    },
-    {
-      src: "https://media.api-sports.io/football/leagues/39.png",
-      title: "Premier League",
-    },
-    {
-      src: "https://media.api-sports.io/football/leagues/140.png",
-      title: "La Liga",
-    },
-    {
-      src: "https://media.api-sports.io/football/leagues/186.png",
-      title: "Ligue 1",
-    },
-  ];
-
-  const club = [
-    {
-      name: "Chelsea FC",
-      src: "https://media.api-sports.io/football/teams/49.png",
-    },
-    {
-      name: "Manchester City",
-      src: "https://media.api-sports.io/football/teams/50.png",
-    },
-    {
-      name: "Bayern Munchen",
-      src: "https://media.api-sports.io/football/teams/157.png",
-    },
-  ];
 
   return (
     <div
@@ -110,7 +71,7 @@ const Sidebar = () => {
                 className="hover:pl-2 mt-3 cursor-pointer flex items-center gap-2 py-1 hover:bg-gray-200 transition-all hover:rounded-md"
               >
                 <div className="avatar mt-2">
-                  <div className={`${openMenu ? 'w-10' : 'w-8'}`}>
+                  <div className={`${openMenu ? "w-10" : "w-8"}`}>
                     <img src={e.src} alt="logo" className="" />
                   </div>
                 </div>

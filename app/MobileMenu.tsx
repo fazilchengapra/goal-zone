@@ -2,11 +2,11 @@ import React from "react";
 import { GiShoppingCart } from "react-icons/gi";
 import { IoMdNotificationsOutline } from "react-icons/io";
 import { IoSearchOutline } from "react-icons/io5";
-import { menu } from "@/public/assets/constant/sideBarMenu";
+import { club, leagues, menu } from "@/public/assets/constant/sideBarMenu";
 
 const MobileMenu = () => {
   return (
-    <div className="py-2 px-2 block lg:hidden bg-[#1B1C21] text-[#A4A4A4] overflow-auto h-[90%]">
+    <div className="py-2 px-3 block lg:hidden bg-[#1B1C21] text-[#A4A4A4] overflow-auto h-[90%]">
       <div className="flex flex-col gap-4">
         <div className="relative block md:hidden mt-2">
           <div className="absolute inset-y-0 left-3 flex items-center pointer-events-none">
@@ -43,6 +43,52 @@ const MobileMenu = () => {
             <p>{e.title}</p>
           </div>
         ))}
+      </div>
+
+      <div className="mt-5">
+        <div className="collapse collapse-arrow bg-base-100">
+          <input type="radio" name="my-accordion-2" defaultChecked />
+          <div className="collapse-title font-semibold">Football League</div>
+          <div className="collapse-content">
+            {leagues.map((e) => (
+              <div className="pb-5" key={e.title}>
+                <div className="flex gap-3 items-center">
+                  <div className="avatar">
+                    <div className="w-10 rounded-full">
+                      <img src={e.src} alt="logo" />
+                    </div>
+                  </div>
+                  <div>
+                    <p>{e.title}</p>
+                  </div>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </div>
+
+      <div className="mt-5">
+        <div className="collapse collapse-arrow bg-base-100">
+          <input type="radio" name="my-accordion-2" />
+          <div className="collapse-title font-semibold">Favorite club</div>
+          <div className="collapse-content">
+            {club.map((e) => (
+              <div className="pb-5" key={e.name}>
+                <div className="flex gap-3 items-center">
+                  <div className="avatar">
+                    <div className="w-10 rounded-full">
+                      <img src={e.src} alt="logo" />
+                    </div>
+                  </div>
+                  <div>
+                    <p>{e.name}</p>
+                  </div>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
       </div>
     </div>
   );

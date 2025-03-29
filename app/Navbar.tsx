@@ -4,6 +4,7 @@ import { IoSunnyOutline, IoSearchOutline } from "react-icons/io5";
 import { IoMdNotificationsOutline } from "react-icons/io";
 import { GiShoppingCart } from "react-icons/gi";
 import { CiMenuBurger } from "react-icons/ci";
+import { IoCloseOutline } from "react-icons/io5";
 import Image from "next/image";
 import Logo from "@/public/assets/Logo.svg";
 import MobileMenu from "./MobileMenu";
@@ -98,11 +99,19 @@ const Navbar = () => {
             </div>
 
             {/* Mobile Menu Toggle */}
-            <CiMenuBurger
-              className="lg:hidden cursor-pointer"
-              size={24}
-              onClick={() => setOpenMenu(!openMenu)}
-            />
+            {openMenu ? (
+              <IoCloseOutline
+                className="lg:hidden cursor-pointer"
+                size={24}
+                onClick={() => setOpenMenu(!openMenu)}
+              />
+            ) : (
+              <CiMenuBurger
+                className="lg:hidden cursor-pointer"
+                size={24}
+                onClick={() => setOpenMenu(!openMenu)}
+              />
+            )}
           </div>
         </nav>
 

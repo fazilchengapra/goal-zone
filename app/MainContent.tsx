@@ -36,8 +36,8 @@ const MainContent = () => {
   }, [targetDate]);
 
   return (
-    <div className="xl:flex w-full xl:items-end">
-      <div className="xl:w-8/12 relative">
+    <div className="xl:grid xl:grid-cols-3 w-full">
+      <div className="xl:col-span-2 relative">
         <Image src={card} alt="Card Image" className="w-full" />
         <div className="absolute top-0 left-0 w-full h-full items-center justify-center text-white flex flex-col">
           <div className="text-center flex flex-col md:gap-2 gap-1 md:text-2xl text-md">
@@ -64,7 +64,7 @@ const MainContent = () => {
         </div>
       </div>
 
-      <div className="xl:w-4/12 bg-white mt-3 xl:mt-0 xl:mx-5 items-center justify-center text-center rounded-md flex flex-col gap-3">
+      <div className="xl:col-span-1 h-auto bg-white mt-3 xl:mt-0 xl:mx-5 items-center justify-center text-center rounded-2xl flex flex-col gap-3 pb-3 xl:pb-0">
         <div className="mt-3 flex flex-col gap-y-2">
           <div className="font-bold">Live Match</div>
           <div className="text-[#096A00] text-sm">62 : 24</div>

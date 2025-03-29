@@ -36,7 +36,7 @@ export default function RootLayout({
             <Sidebar />
             <div className="flex flex-col flex-1 h-screen">
               <Navbar />
-              <div className="flex-1 overflow-auto p-4">{children}</div>
+              <div className="flex-1 overflow-y-auto w-11/12 m-auto">{children}</div>
             </div>
           </div>
         </ReduxProvider>

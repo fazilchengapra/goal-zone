@@ -2,7 +2,6 @@ import React from "react";
 import { CiCircleInfo } from "react-icons/ci";
 import { BsGraphUp } from "react-icons/bs";
 
-
 const MatchDetials = () => {
   return (
     <div className="w-full overflow-x-auto rounded-box border border-base-content/5 bg-base-100">
@@ -44,7 +43,7 @@ const MatchDetials = () => {
             </td>
             <td>
               <div className="flex flex-col justify-center items-center">
-                <div className="bg-[#E6E6E6] w-fit px-4 text-sm rounded-2xl font-semibold text-[#5742A9]">
+                <div className="bg-[#EFEDF7] w-fit px-4 text-sm rounded-2xl font-semibold text-[#5742A9]">
                   2 - 2
                 </div>
               </div>
@@ -63,17 +62,20 @@ const MatchDetials = () => {
               </div>
             </td>
             <td>
-              <div className="badge bg-[#FBE3E3] text-sm font-light text-[#FA0E0E] px-3 py-4">
-                Full - Time
+              <div className="flex flex-row items-center">
+                <div className="w-[6rem] md:w-[7rem] badge bg-red-100 text-xs md:text-sm font-light text-red-600 px-2 py-1 h-fit lg:px-4 lg:py-2">
+                  <p className=" min-w-auto">Full - Time</p>
+                </div>
               </div>
             </td>
+
             <td>
               <p className="text-[#636363]">18 December 2022</p>
             </td>
             <td>
               <div className="flex flex-row gap-4 items-center">
-                <CiCircleInfo size={25} color="#636363"/>
-                <BsGraphUp size={25} color="#636363"/>
+                <CiCircleInfo size={25} color="#636363" />
+                <BsGraphUp size={25} color="#636363" />
               </div>
             </td>
           </tr>

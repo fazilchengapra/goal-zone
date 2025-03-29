@@ -70,7 +70,7 @@ const MainContent = () => {
           <div className="text-[#096A00] text-sm">62 : 24</div>
         </div>
         <div className="items-center content-center w-full flex flex-col justify-center mt-2">
-          <div className="bg-[#E6E6E6] w-fit text-center px-6 py-2 text-xl rounded-2xl font-semibold text-[#5742A9]">
+          <div className="bg-[#EFEDF7] w-fit text-center px-6 py-2 text-xl rounded-2xl font-semibold text-[#5742A9]">
             2 - 2
           </div>
         </div>

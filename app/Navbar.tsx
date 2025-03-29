@@ -20,14 +20,14 @@ const Navbar = () => {
     !loading && (
       <div className="w-full h-fit relative">
         {/* Navbar */}
-        <nav className="navbar bg-base-100 shadow-sm flex items-center justify-between px-4 z-50">
+        <nav className="navbar shadow-sm flex items-center justify-between px-4 z-50">
           {/* Logo (Mobile) */}
           <div className="lg:hidden">
             <Image src={Logo} alt="logo" className="w-24 h-auto select-none" />
           </div>
 
           {/* Search Bar (Hidden on Mobile) */}
-          <div className="hidden md:block flex-1 ml-5">
+          <div className="hidden md:block flex-1 ml-5 mr-2">
             <div className="relative w-full max-w-[548px]">
               <IoSearchOutline
                 size={20}
@@ -43,7 +43,7 @@ const Navbar = () => {
 
           {/* Icons & Profile */}
           <div className="flex items-center gap-5">
-            <button className="btn bg-[#5742A9] text-white text-sm font-medium rounded-md py-1">
+            <button className="btn bg-[#5742A9] text-white text-sm font-medium rounded-md py-1 ">
               Go Premium
             </button>
 

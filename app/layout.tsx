@@ -29,10 +29,10 @@ export default function RootLayout({
   return (
     <html lang="en" >
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased min-h-screen`}
+        className={`${geistSans.variable} ${geistMono.variable} antialiased min-h-screen `}
       >
         <ReduxProvider>
-          <div className="flex min-h-screen w-full">
+          <div className="flex min-h-screen w-full !bg-[#F6F6F4]">
             <Sidebar />
             <div className="flex flex-col flex-1 h-screen">
               <Navbar />

@@ -46,7 +46,7 @@ const MobileMenu = () => {
       </div>
 
       <div className="mt-5">
-        <div className="collapse collapse-arrow bg-base-100">
+        <div className="collapse collapse-arrow bg-[#1B1C21]">
           <input type="radio" name="my-accordion-2" defaultChecked />
           <div className="collapse-title font-semibold">Football League</div>
           <div className="collapse-content">
@@ -68,8 +68,8 @@ const MobileMenu = () => {
         </div>
       </div>
 
-      <div className="mt-5">
-        <div className="collapse collapse-arrow bg-base-100">
+      <div className="mt-5 ">
+        <div className="collapse collapse-arrow bg-[#1B1C21]">
           <input type="radio" name="my-accordion-2" />
           <div className="collapse-title font-semibold">Favorite club</div>
           <div className="collapse-content">

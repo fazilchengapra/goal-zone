@@ -10,6 +10,8 @@ import Logo from "@/public/assets/Logo.svg";
 import MobileMenu from "./MobileMenu";
 
 const Navbar = () => {
+  
+  
   const [loading, setLoading] = useState(true);
   const [openMenu, setOpenMenu] = useState(false);
 

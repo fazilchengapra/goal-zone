@@ -43,8 +43,8 @@ const MatchDetials = () => {
                 </div>
               </td>
               <td>
-                <div className="flex flex-col justify-center items-center">
-                  <div className="bg-[#EFEDF7] w-fit px-4 text-sm rounded-2xl font-semibold text-[#5742A9]">
+                <div className="flex flex-col justify-center items-center min-w-20">
+                  <div className="bg-[#EFEDF7] px-4 text-sm rounded-2xl font-semibold text-[#5742A9]">
                     {`${e.team1.score} - ${e.team2.score}`}
                   </div>
                 </div>
@@ -71,7 +71,7 @@ const MatchDetials = () => {
               </td>
 
               <td>
-                <p className="text-[#636363]">18 December 2022</p>
+                <div><p className="text-[#636363] w-[8rem]">18 December 2022</p></div>
               </td>
               <td>
                 <div className="flex flex-row gap-4 items-center">

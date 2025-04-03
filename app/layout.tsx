@@ -4,7 +4,7 @@ import "./globals.css";
 import Sidebar from "./Sidebar"; // Adjust path as per your structure
 import ReduxProvider from "./redux/ReduxProvider";
 import Navbar from "./Navbar";
-
+import Footer from "./Footer";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -27,7 +27,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" >
+    <html lang="en">
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased min-h-screen `}
       >
@@ -36,7 +36,10 @@ export default function RootLayout({
             <Sidebar />
             <div className="flex flex-col flex-1 h-screen">
               <Navbar />
-              <div className="flex-1 overflow-y-auto w-11/12 m-auto my-5">{children}</div>
+              <div className="flex-1 overflow-y-auto w-11/12 m-auto my-5">
+                {children}
+                <Footer />
+              </div>
             </div>
           </div>
         </ReduxProvider>

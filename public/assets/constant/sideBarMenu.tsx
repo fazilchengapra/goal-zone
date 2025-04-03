@@ -7,46 +7,33 @@ import { RiDashboardLine } from "react-icons/ri";
 export const menu = [
   {
     title: "Dashboard",
-    icon: (
-      <RiDashboardLine
-        size={25}
-        className="text-[#636363] group-hover:text-white"
-      />
-    ),
+    path: "/",
+    icon: RiDashboardLine,
   },
   {
     title: "Live Football",
-    icon: (
-      <HiOutlineVideoCamera
-        size={20}
-        className="text-[#636363] group-hover:text-white"
-      />
-    ),
+    path: "/live-football",
+    icon: HiOutlineVideoCamera,
   },
   {
     title: "Standings",
-    icon: (
-      <GoSortAsc size={25} className="text-[#636363] group-hover:text-white" />
-    ),
+    path: "/standings",
+    icon: GoSortAsc,
   },
   {
     title: "Highlights",
-    icon: <BiTv size={25} className="text-[#636363] group-hover:text-white" />,
+    path: "/highlights",
+    icon: BiTv,
   },
   {
     title: "Shop",
-    icon: (
-      <CiShop size={25} className="text-[#636363] group-hover:text-white" />
-    ),
+    path: "/shop",
+    icon: CiShop,
   },
   {
     title: "News",
-    icon: (
-      <HiOutlineNewspaper
-        size={25}
-        className="text-[#636363] group-hover:text-white"
-      />
-    ),
+    path: "/news",
+    icon: HiOutlineNewspaper,
   },
 ];
 

@@ -1,14 +1,16 @@
 "use client";
 import Image from "next/image";
-import { useState } from "react";
+import React, { useState } from "react";
 import Logo from "@/public/assets/Logo.svg";
 import LogoSm from "@/public/assets/Tvit.svg";
 import { MdMenuOpen } from "react-icons/md";
 import { FaStar } from "react-icons/fa";
 import { menu, leagues, club } from "@/public/assets/constant/sideBarMenu";
+import { usePathname } from "next/navigation";
 
 const Sidebar = () => {
   const [openMenu, setOpenMenu] = useState(true);
+  const location = usePathname();
 
   return (
     <div
@@ -48,9 +50,20 @@ const Sidebar = () => {
                 key={item.title}
                 className="group flex gap-2 items-center py-2 cursor-pointer hover:bg-[#5742A9] hover:pl-5 transition-all w-[90%] rounded-md"
               >
-                {item.icon}
+                <item.icon
+                  size={25}
+                  className={`transition-colors ${
+                    location === item.path ? "text-[#5742A9]" : "text-[#636363]"
+                  } group-hover:text-white`}
+                />
                 {openMenu && (
-                  <p className="text-xs text-[#636363] group-hover:text-white">
+                  <p
+                    className={`text-xs ${
+                      location === item.path
+                        ? "text-[#5742A9] font-medium"
+                        : "text-[#636363]"
+                    } group-hover:text-white`}
+                  >
                     {item.title}
                   </p>
                 )}

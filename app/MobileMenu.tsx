@@ -39,7 +39,7 @@ const MobileMenu = () => {
       <div className="flex flex-col gap-4">
         {menu.map((e) => (
           <div className="flex gap-3 pb-1 " key={e.title}>
-            <div className="text-[#A4A4A4]">{e.icon}</div>
+            <div className="text-[#A4A4A4]">{<e.icon size={25}/>}</div>
             <p>{e.title}</p>
           </div>
         ))}

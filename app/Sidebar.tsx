@@ -7,6 +7,7 @@ import { MdMenuOpen } from "react-icons/md";
 import { FaStar } from "react-icons/fa";
 import { menu, leagues, club } from "@/public/assets/constant/sideBarMenu";
 import { usePathname } from "next/navigation";
+import Link from "next/link";
 
 const Sidebar = () => {
   const [openMenu, setOpenMenu] = useState(true);
@@ -46,28 +47,31 @@ const Sidebar = () => {
           <p className="uppercase text-xs font-thin text-[#636363]">menu</p>
           <div className="mt-4">
             {menu.map((item) => (
-              <div
-                key={item.title}
-                className="group flex gap-2 items-center py-2 cursor-pointer hover:bg-[#5742A9] hover:pl-5 transition-all w-[90%] rounded-md"
-              >
-                <item.icon
-                  size={25}
-                  className={`transition-colors ${
-                    location === item.path ? "text-[#5742A9]" : "text-[#636363]"
-                  } group-hover:text-white`}
-                />
-                {openMenu && (
-                  <p
-                    className={`text-xs ${
+              <Link key={item.title} href={item.path}>
+                <div
+                  className="group flex gap-2 items-center py-2 cursor-pointer hover:bg-[#5742A9] hover:pl-5 transition-all w-[90%] rounded-md"
+                >
+                  <item.icon
+                    size={25}
+                    className={`transition-colors ${
                       location === item.path
-                        ? "text-[#5742A9] font-medium"
+                        ? "text-[#5742A9]"
                         : "text-[#636363]"
                     } group-hover:text-white`}
-                  >
-                    {item.title}
-                  </p>
-                )}
-              </div>
+                  />
+                  {openMenu && (
+                    <p
+                      className={`text-xs ${
+                        location === item.path
+                          ? "text-[#5742A9] font-medium"
+                          : "text-[#636363]"
+                      } group-hover:text-white`}
+                    >
+                      {item.title}
+                    </p>
+                  )}
+                </div>
+              </Link>
             ))}
           </div>
         </div>

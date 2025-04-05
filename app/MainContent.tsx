@@ -5,7 +5,7 @@ import card from "@/public/assets/Card.png";
 
 const MainContent = () => {
   // Set the target date (YYYY-MM-DD HH:MM:SS format)
-  const targetDate = new Date("2025-04-01T00:00:00").getTime(); 
+  const targetDate = new Date("2025-05-01T00:00:00").getTime(); 
 
   // State for countdown values
   const [timeLeft, setTimeLeft] = useState({

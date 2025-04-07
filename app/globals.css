@@ -3,8 +3,10 @@
 @import "tailwindcss/preflight.css" layer(base);
 @plugin "daisyui" {
   themes: light --default
-}
+};
 @custom-variant dark (&:where(.dark, .dark *));
+@plugin 'tailwind-scrollbar';
+@plugin 'tailwind-scrollbar-hide';
 
 :root {
   --background: #ffffff;

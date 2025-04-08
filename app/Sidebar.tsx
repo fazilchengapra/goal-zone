@@ -42,7 +42,7 @@ const Sidebar = () => {
         />
       </div>
 
-      <div className="overflow-y-scroll scroll-smooth h-[calc(100%-30px)]">
+      <div className="overflow-y-scroll scroll-smooth h-[calc(100%-30px)] custom-scrollbar">
         <div className="mt-10">
           <p className="uppercase text-xs font-thin text-[#636363]">menu</p>
           <div className="mt-4">

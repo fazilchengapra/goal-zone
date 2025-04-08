@@ -36,7 +36,7 @@ export default function RootLayout({
             <Sidebar />
             <div className="flex flex-col flex-1 h-screen">
               <Navbar />
-              <div className="flex-1 overflow-y-auto w-11/12 m-auto my-5 ">
+              <div className="flex-1 overflow-y-auto w-11/12 m-auto my-5 scrollbar-thumb-[#F2F2F2] scrollbar-thin ">
                 {children}
                 <Footer />
               </div>

@@ -5,7 +5,11 @@ const config = {
   darkMode: "class", // Enables manual dark mode with class
   content: ["./pages/**/*.{js,ts,jsx,tsx, html}", "./components/**/*.{js,ts,jsx,tsx, html}"],
   theme: {
-    extend: {},
+    extend: {
+      colors:{
+         royal: '#5742A9'
+      }
+    },
   },
   plugins: [daisyui],
   daisyui: {

@@ -1,12 +1,12 @@
 import React from "react";
-import jersy from "@/public/assets/jersy.svg";
+import jersey from "@/public/assets/jersy.svg";
 import Image from "next/image";
 
 const JerseyCard = () => {
   return (
-    <div className="">
-      <div className=" w-fit p-5 bg-white rounded-lg">
-        <Image className="w-44 h-44" src={jersy} alt="jersy" />
+    <div className="p-0 m-0">
+      <div className="w-fit p-2 md:p-5 bg-white rounded-lg justify-center flex flex-col items-center gap-2 cursor-pointer">
+        <Image className="w-28 h-28 md:w-44 md:h-44" src={jersey} alt="jersy" />
 
         <div className="divider"/>
         <div className="flex flex-col gap-2">

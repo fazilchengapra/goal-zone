@@ -37,11 +37,11 @@ const CustomLegend = () => {
 
 const PerformanceChart = () => {
   return (
-    <div className="w-full h-auto lg:max-h-[480px] bg-white rounded-xl shadow">
+    <div className="w-full min-h-[300px] bg-white rounded-xl shadow">
       <div className="mx-4 mt-2 flex flex-row items-center justify-between">
         <h2 className="text-lg mb-4">Graphic Performance</h2>
       </div>
-      <ResponsiveContainer width="100%" height="80%">
+      <ResponsiveContainer width="100%" height={250}>
         <AreaChart
           data={data}
           margin={{ top: 10, right: 30, left: 0, bottom: 0 }}

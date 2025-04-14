@@ -1,8 +1,12 @@
+import Image from "next/image";
 import React from "react";
+import manOftheMatch from "@/public/assets/manOfTheMatch.svg";
+import Graph from "./Graph";
+import Formation from "./Formation";
 
 const MainContent = () => {
   return (
-    <div className="w-full">
+    <div className="w-full flex flex-col gap-4">
       <div className="relative flex flex-col items-center justify-center gap-4 bg-white py-5 rounded-lg w-full overflow-hidden">
         {/* Left Image */}
         <img
@@ -19,7 +23,9 @@ const MainContent = () => {
         />
 
         {/* Content */}
-        <div className="relative z-10 text-sm font-semibold">Lusail Stadium</div>
+        <div className="relative z-10 text-sm font-semibold">
+          Lusail Stadium
+        </div>
 
         <div className="relative z-10 flex flex-row gap-8 md:gap-12">
           {/* Portugal */}
@@ -27,7 +33,10 @@ const MainContent = () => {
             <div className="flex flex-row gap-2 md:gap-4 items-center">
               <div className="avatar">
                 <div className="w-8 md:w-10 rounded-full overflow-hidden">
-                  <img src="https://r2.thesportsdb.com/images/media/team/logo/4jwa1i1599314931.png" alt="Portugal" />
+                  <img
+                    src="https://r2.thesportsdb.com/images/media/team/logo/4jwa1i1599314931.png"
+                    alt="Portugal"
+                  />
                 </div>
               </div>
               <div className="font-semibold text-xs md:text-lg">Portugal</div>
@@ -50,7 +59,10 @@ const MainContent = () => {
             <div className="flex flex-row gap-2 md:gap-4 items-center">
               <div className="avatar">
                 <div className="w-8 md:w-10 rounded-full overflow-hidden">
-                  <img src="https://upload.wikimedia.org/wikipedia/commons/6/65/Flag_of_Belgium.svg" alt="Belgium" />
+                  <img
+                    src="https://upload.wikimedia.org/wikipedia/commons/6/65/Flag_of_Belgium.svg"
+                    alt="Belgium"
+                  />
                 </div>
               </div>
               <div className="font-semibold text-xs md:text-lg">Belgium</div>
@@ -59,6 +71,78 @@ const MainContent = () => {
               <p>R. Lukaku 42’</p>
               <p>E. Hazard 58’</p>
               <p>E. Hazard 90’+3</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div className="w-full overflow-hidden">
+        <Image
+          src={manOftheMatch}
+          className="w-full rounded-lg"
+          alt="manofthematch"
+        />
+      </div>
+      <div className="flex flex-col lg:flex-row gap-2 w-full">
+        <div className="flex flex-col gap-4 w-full lg:w-4/6">
+          <Graph />
+          <Formation />
+        </div>
+        <div className="flex flex-col w-full lg:w-2/6 h-fit gap-6">
+          <div className="bg-white py-5 rounded-lg">
+            <div className="text-center">
+              <p>Team Statistic</p>
+            </div>
+            <div className="flex flex-col lg:flex-row gap-4 w-full">
+              <div className="flex flex-col gap-3 w-full px-3">
+                {[
+                  "Pass",
+                  "Shoot",
+                  "Shoot on Target",
+                  "Ball Possession",
+                  "Red Card",
+                  "Yellow Card",
+                  "Offside",
+                  "Corners",
+                ].map((stat) => (
+                  <div key={stat}>
+                    <div className="text-sm text-center">{stat}</div>
+                    <div className="flex justify-between text-xs">
+                      <div className="text-info font-semibold">7</div>
+                      <div className="text-error font-semibold">3</div>
+                    </div>
+                    <div className="grid grid-cols-2 gap-3">
+                      <progress
+                        className="progress progress-info w-full rounded-md"
+                        value={90}
+                        max="100"
+                      ></progress>
+                      <progress
+                        className="progress progress-error w-full rounded-md"
+                        value={50}
+                        max="100"
+                      ></progress>
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </div>
+
+          <div className="flex flex-col gap-4 bg-white rounded-lg py-5">
+            <div className="text-center">Team Line Up</div>
+            <div className="divider p-0 m-0" />
+            <div className="flex flex-col gap-2 mx-4">
+              <div className="flex flex-row gap-3 justify-between text-center">
+                <div className="flex flex-row gap-1 text-sm">
+                  <div className="text-[#096A00]">GK</div>
+                  <div> Diogo Costa</div>
+                </div>
+
+                <div className="flex flex-row gap-1 text-sm">
+                  <div>T. Courtois</div>
+                  <div className="text-[#560617]">GK</div>
+                </div>
+              </div>
             </div>
           </div>
         </div>

@@ -11,9 +11,10 @@ import MobileMenu from "./MobileMenu";
 import { themeAction } from "./redux/slices/appSlice";
 import { useDispatch, useSelector } from "react-redux";
 import { IoMoonOutline } from "react-icons/io5";
+import { RootState } from "./redux/store";
 
 const Navbar = () => {
-  const mode = useSelector((store) => store?.app?.theme);
+  const mode = useSelector((store:RootState) => store?.app?.theme);
   const dispatch = useDispatch();
   const [loading, setLoading] = useState(true);
   const [openMenu, setOpenMenu] = useState(false);

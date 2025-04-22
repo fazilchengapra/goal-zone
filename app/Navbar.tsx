@@ -8,10 +8,13 @@ import { IoCloseOutline } from "react-icons/io5";
 import Image from "next/image";
 import Logo from "@/public/assets/Logo.svg";
 import MobileMenu from "./MobileMenu";
+import { themeAction } from "./redux/slices/appSlice";
+import { useDispatch, useSelector } from "react-redux";
+import { IoMoonOutline } from "react-icons/io5";
 
 const Navbar = () => {
-  
-  
+  const mode = useSelector((store) => store?.app?.theme);
+  const dispatch = useDispatch();
   const [loading, setLoading] = useState(true);
   const [openMenu, setOpenMenu] = useState(false);
 
@@ -21,7 +24,7 @@ const Navbar = () => {
 
   return (
     !loading && (
-      <div className="w-full h-fit relative">
+      <div className="w-full h-fit relative dark:bg-[#1B1C21]">
         {/* Navbar */}
         <nav className="navbar shadow-sm flex items-center justify-between px-4 z-50">
           {/* Logo (Mobile) */}
@@ -34,38 +37,44 @@ const Navbar = () => {
             <div className="relative w-full max-w-[548px]">
               <IoSearchOutline
                 size={20}
-                className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-600"
+                className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-600 dark:text-[#A4A4A4]"
               />
               <input
                 type="text"
                 placeholder="Type to search..."
-                className="text-sm bg-gray-200 w-full rounded-md pl-10 py-2 focus:outline-none border-none"
+                className="text-sm dark:text-[#A4A4A4] bg-gray-200 dark:bg-[#2E3034] w-full rounded-md pl-10 py-2 focus:outline-none border-none"
               />
             </div>
           </div>
 
           {/* Icons & Profile */}
           <div className="flex items-center gap-5">
-            <button className="btn bg-[#5742A9] text-white text-sm font-medium rounded-md py-1 ">
+            <button className="btn bg-[#5742A9] dark:bg-[#F5C451] text-white dark:text-[#100F0F] border-none text-sm font-medium rounded-md py-1 ">
               Go Premium
             </button>
 
             {/* Icons (Hidden on Mobile) */}
             <GiShoppingCart
-              className="hidden lg:block"
+              className="hidden lg:block text-[#636363] dark:text-[#A4A4A4]"
               size={30}
-              color="#636363"
             />
             <IoMdNotificationsOutline
-              className="hidden lg:block"
+              className="hidden lg:block text-[#636363] dark:text-[#A4A4A4]"
               size={30}
-              color="#636363"
             />
-            <IoSunnyOutline
-              className="hidden lg:block"
-              size={30}
-              color="#636363"
-            />
+            {mode === "dark" ? (
+              <IoMoonOutline
+                className="hidden lg:block text-[#636363] dark:text-[#A4A4A4]"
+                size={30}
+                onClick={() => dispatch(themeAction())}
+              />
+            ) : (
+              <IoSunnyOutline
+                className="hidden lg:block text-[#636363] dark:text-[#A4A4A4]"
+                size={30}
+                onClick={() => dispatch(themeAction())}
+              />
+            )}
 
             {/* Profile Dropdown */}
             <div className="dropdown dropdown-end hidden md:block">

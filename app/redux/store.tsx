@@ -3,7 +3,7 @@ import menuReducer from './slices/appSlice'
 
 export const store = configureStore({
     reducer: {
-        menu: menuReducer
+        app: menuReducer,
     }
 })
 

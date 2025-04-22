@@ -64,13 +64,13 @@ const MainContent = () => {
         </div>
       </div>
 
-      <div className="xl:col-span-1 h-auto bg-white mt-3 xl:mt-0 xl:mx-5 items-center justify-center text-center rounded-2xl flex flex-col gap-3 pb-3 xl:pb-0">
+      <div className="xl:col-span-1 h-auto dark:bg-[#1B1C21] bg-white mt-3 xl:mt-0 xl:mx-5 items-center justify-center text-center rounded-2xl flex flex-col gap-3 pb-3 xl:pb-0">
         <div className="mt-3 flex flex-col gap-y-2">
-          <div className="font-bold">Live Match</div>
-          <div className="text-[#096A00] text-sm">62 : 24</div>
+          <div className="font-bold dark:text-[#FFFFFF]">Live Match</div>
+          <div className="text-[#096A00] dark:text-[#14FF00] text-sm">62 : 24</div>
         </div>
         <div className="items-center content-center w-full flex flex-col justify-center mt-2">
-          <div className="bg-[#EFEDF7] w-fit text-center px-6 py-2 text-xl rounded-2xl font-semibold text-[#5742A9]">
+          <div className="bg-[#EFEDF7] dark:bg-[#302D26] w-fit text-center px-6 py-2 text-xl rounded-2xl font-semibold text-[#5742A9] dark:text-[#F5C451]">
             2 - 2
           </div>
         </div>
@@ -78,7 +78,7 @@ const MainContent = () => {
           <div className="flex flex-col gap-3">
             {["Shoot on Target", "Shoot", "Fouls"].map((stat) => (
               <div key={stat}>
-                <div className="text-sm">{stat}</div>
+                <div className="text-sm dark:text-[#fff]">{stat}</div>
                 <div className="flex justify-between text-xs">
                   <div className="text-info font-semibold">7</div>
                   <div className="text-error font-semibold">3</div>

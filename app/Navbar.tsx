@@ -65,13 +65,13 @@ const Navbar = () => {
             />
             {mode === "dark" ? (
               <IoMoonOutline
-                className="hidden lg:block text-[#636363] dark:text-[#A4A4A4]"
+                className=" lg:block text-[#636363] dark:text-[#A4A4A4]"
                 size={30}
                 onClick={() => dispatch(themeAction())}
               />
             ) : (
               <IoSunnyOutline
-                className="hidden lg:block text-[#636363] dark:text-[#A4A4A4]"
+                className=" lg:block text-[#636363] dark:text-[#A4A4A4]"
                 size={30}
                 onClick={() => dispatch(themeAction())}
               />
@@ -113,13 +113,13 @@ const Navbar = () => {
             {/* Mobile Menu Toggle */}
             {openMenu ? (
               <IoCloseOutline
-                className="lg:hidden cursor-pointer"
+                className="lg:hidden cursor-pointer dark:text-white"
                 size={24}
                 onClick={() => setOpenMenu(!openMenu)}
               />
             ) : (
               <CiMenuBurger
-                className="lg:hidden cursor-pointer"
+                className="lg:hidden cursor-pointer dark:text-white"
                 size={24}
                 onClick={() => setOpenMenu(!openMenu)}
               />
@@ -137,7 +137,7 @@ const Navbar = () => {
               className="fixed top-16 left-0 h-full w-full bg-white shadow-lg transform transition-all duration-300"
               onClick={(e) => e.stopPropagation()} // Prevent closing when clicking inside menu
             >
-              <MobileMenu />
+              <MobileMenu btn={setOpenMenu}/>
             </div>
           </div>
         )}

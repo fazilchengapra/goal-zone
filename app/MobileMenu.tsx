@@ -3,8 +3,13 @@ import { GiShoppingCart } from "react-icons/gi";
 import { IoMdNotificationsOutline } from "react-icons/io";
 import { IoSearchOutline } from "react-icons/io5";
 import { club, leagues, menu } from "@/public/assets/constant/sideBarMenu";
+import Link from "next/link";
 
-const MobileMenu = () => {
+
+type MobileMenuProps = {
+  btn: React.Dispatch<React.SetStateAction<boolean>>;
+};
+const MobileMenu = ({btn}:MobileMenuProps) => {
   return (
     <div className="py-2 px-3 block lg:hidden bg-[#1B1C21] text-[#A4A4A4] overflow-auto h-[90%]">
       <div className="flex flex-col gap-4">
@@ -38,10 +43,12 @@ const MobileMenu = () => {
       <div className="mt-3 mb-3 w-1/2 h-[2px] rounded-md bg-[#A4A4A4]"></div>
       <div className="flex flex-col gap-4">
         {menu.map((e) => (
-          <div className="flex gap-3 pb-1 " key={e.title}>
-            <div className="text-[#A4A4A4]">{<e.icon size={25}/>}</div>
-            <p>{e.title}</p>
-          </div>
+          <Link key={e.title} href={e.path} onClick={() => btn(false)}>
+            <div className="flex gap-3 pb-1 ">
+              <div className="text-[#A4A4A4]">{<e.icon size={25} />}</div>
+              <p>{e.title}</p>
+            </div>
+          </Link>
         ))}
       </div>
 
